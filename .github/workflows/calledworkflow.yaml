@@ -1,0 +1,28 @@
+name: CalledWorkflow
+
+on:
+ repository_dispatch:
+    types: [CalledWorkflow]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+       parameter1: ${{ github.event.client_payload.parameter1 }}
+       parameter2: ${{ github.event.client_payload.parameter2 }}
+
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Cloud Quick Labs!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+          echo $parameter1
+          echo $parameter2
