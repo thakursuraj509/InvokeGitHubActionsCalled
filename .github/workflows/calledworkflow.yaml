@@ -1,8 +1,8 @@
-name: CalledWorkflow
+name: Called Workflow
 
 on:
  repository_dispatch:
-    types: [CalledWorkflow]
+    types: [Called Workflow]
 
 jobs:
 
