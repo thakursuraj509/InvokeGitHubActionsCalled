@@ -1,8 +1,8 @@
-name: Called_Workflow
+name: Called Workflow Test
 
 on:
  repository_dispatch:
-    types: [Called_Workflow]
+    types: [Called Workflow Test]
 
 jobs:
 
